@@ -10,11 +10,7 @@
 
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 {
-if (parent == NULL) /*Error Check.*/
-{
-   return (NULL);
-}
-
+   
 binary_tree_t *new_node = malloc(sizeof(binary_tree_t)); /*Allocate memory.*/
 
 if (new_node == NULL) /*Error Check.*/
