@@ -19,10 +19,10 @@ if (new_node == NULL) /*Error Proof.*/
    return (NULL); 
 }
 
-new_node->n = value;
-new_node->parent = parent;
-new_node->left = NULL;
-new_node->right = NULL;
+new_node->n = value; /*Content the node holds.*/
+new_node->parent = parent; /*Birthplace.*/
+new_node->left = NULL; /*No sibling node*/
+new_node->right = NULL; /*No sibling node.*/
 
 return (new_node);
 }
