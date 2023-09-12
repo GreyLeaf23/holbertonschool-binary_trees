@@ -10,14 +10,12 @@
 
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 {
-binary_tree_t *new_node; /*Declaration of New Node.*/
-
-if (parent == NULL || value == '\0') /*Error Check.*/
+if (parent == NULL) /*Error Check.*/
 {
    return (NULL);
 }
 
-new_node = malloc(sizeof(binary_tree_t)); /*Allocate memory.*/
+binary_tree_t *new_node = malloc(sizeof(binary_tree_t)); /*Allocate memory.*/
 
 if (new_node == NULL) /*Error Check.*/
 {
