@@ -10,19 +10,16 @@
 
 size_t binary_tree_depth(const binary_tree_t *tree)
 {
+
 size_t depth = 0;
 
 if (tree == NULL)
     return (0);
 
-const binary_tree_t *current = tree; /*'current' is use to traverse tree.*/
-
-/*Navigation through tree until 'current' reaches the root.*/
-    while (current->parent != NULL)
-    {
-        depth++;
-        current = current->parent;
-    }
+if (tree->parent != NULL)
+{
+    depth += 1 + binary_tree_depth(tree->parent); /*Assign variable as depth of binary tree.*/
+}
 
     return (depth);
 }
