@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_sibling - finds sibling of node in binary tree..
+ * binary_tree_sibling - finds sibling of node in binary tree.
  * @node: pointer to the node to find sibling.
  *
  * Return: sibling of node.
