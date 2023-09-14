@@ -13,16 +13,14 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node)
     if (node == NULL || node->parent == NULL)
         return (NULL);
 
-/*Assign 'parent' variable to hold 'parent' from binary structure.*/
-    binary_tree_t *parent = node->parent;
 
-    if (parent->left == node) /*Check if left node has a right sibling.*/
+    if (node->parent->left == node) /*Check if left node has a right sibling.*/
     {
-        return (parent->right);
+        return (node->parent->right);
     }
 
     else
     {
-        return (parent->left);
+        return (node->parent->left);
     }
 }
