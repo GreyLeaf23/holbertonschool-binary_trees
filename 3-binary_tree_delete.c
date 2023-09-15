@@ -8,12 +8,11 @@
 void binary_tree_delete(binary_tree_t *tree)
 {
 
-if (tree == NULL)
-   return;
+	if (tree == NULL)
+		return (NULL);
 
-binary_tree_delete(tree->left); /*Deletion of left sub-tree.*/
-binary_tree_delete(tree->right); /*Deletion of right subtree.*/
+	binary_tree_delete(tree->left); /*Deletion of left sub-tree.*/
+	binary_tree_delete(tree->right); /*Deletion of right subtree.*/
 
-free(tree); /*free mermory of binary tree.*/
-
+	free(tree); /*free mermory of binary tree.*/
 }

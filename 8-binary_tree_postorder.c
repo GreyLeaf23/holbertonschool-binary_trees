@@ -8,14 +8,16 @@
 
 void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int))
 {
-    if (tree == NULL || func == NULL)
-    {
-        return;
-    }
+	if (tree == NULL || func == NULL)
+	{
+		return;
+	}
 
-binary_tree_postorder(tree->left, func); /*Post-orderly traverse to the left subtree.*/
+	binary_tree_postorder(tree->left, func);
+/*Post-orderly traverse to the left subtree.*/
 
-binary_tree_postorder(tree->right, func); /*Post-orderly traverse the right subtree.*/
+	binary_tree_postorder(tree->right, func);
+/*Post-orderly traverse the right subtree.*/
 
-func(tree->n); /*Call the function with the current node's value.*/
+	func(tree->n); /*Call the function with the current node's value.*/
 }
